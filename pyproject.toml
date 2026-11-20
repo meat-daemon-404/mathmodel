@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zcode-mathmodel"
+version = "1.1.0"
+description = "Autonomous mathematical-modelling agent & MCP server for ZCode and Claude Code: solves numerically, validates, plots, and writes up with a self-proving secret/identity publish gate."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [
+  { name = "meat-daemon-404" }
+]
+keywords = [
+  "mathematical-modeling",
+  "cumcm",
+  "mcm-icm",
+  "ai-agent",
+  "mcp-server",
+  "zcode-plugin",
+  "claude-code",
+  "scipy",
+  "optimization"
+]
+dependencies = [
+  "numpy>=1.24.0",
+  "matplotlib>=3.7.0",
+]
+
+[project.optional-dependencies]
+full = [
+  "scipy>=1.10.0",
+  "sympy>=1.12",
+  "pandas>=2.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/meat-daemon-404/mathmodel"
+Repository = "https://github.com/meat-daemon-404/mathmodel.git"
+Issues = "https://github.com/meat-daemon-404/mathmodel/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["engine*"]
